@@ -1,4 +1,4 @@
-#include "../../std_lib_facilities.h"
+#include "std_lib_facilities.h"
 
 constexpr char number = '8';
 constexpr char quit = 'x';//drill 6.2

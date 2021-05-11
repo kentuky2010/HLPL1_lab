@@ -15,6 +15,7 @@ struct Date
 
 	void add_day(int n)
 	{
+		d += n;
 		while (d > 31)
 		{
 			d -= 31;

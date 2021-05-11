@@ -2,9 +2,9 @@
 // Drill 9.4.1
 struct Date
 {
-	int y; //year
-	int m; //month in year
-	int d; //day in month
+	int y; 
+	int m; 
+	int d; 
 };
 
 void init_day(Date& dd, int y, int m, int d)
@@ -28,8 +28,14 @@ void init_day(Date& dd, int y, int m, int d)
 
 void add_day(Date& dd, int n)
 {
+	int m;
 	dd.d += n;
-	while (dd.d > 31) 
+	if (dd.m == 1 || dd.m == 3 || dd.m == 5 || dd.m == 7 || dd.m == 8 || dd.m == 10 || dd.m == 12)
+		m = 31;
+	else if (dd.m == 2)
+		m = 29;
+	else m = 30;
+	while (dd.d > m) 
 	{
 		dd.d -= 31;
 		dd.m++;
@@ -52,7 +58,7 @@ void f()
 	init_day(today, 1978, 6, 25);
 	cout << today << "\n";
 	Date tomorrow = today;
-	add_day(tomorrow, 1);
+	add_day(tomorrow, 365);
 	cout << tomorrow << "\n";
 }
 int main()

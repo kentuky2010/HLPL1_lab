@@ -61,7 +61,7 @@ public:
 
 ostream& operator<<(ostream& os, Date& d)
 {
-	return os << '(' <<	d.get_year() << ',' << d.get_month() << ',' << d.get_day() << ')';
+	return os <<  d.get_year() << "." << d.get_month() << "." << d.get_day();
 }
 
 void f()

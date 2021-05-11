@@ -38,7 +38,7 @@ ostream& operator<<(ostream& os, const Date& d)
 }
 
 void f()
-{
+try{
 	Date today;
 	init_day(today, 1978, 6, 25);
 	cout << today << "\n";
@@ -46,6 +46,12 @@ void f()
 	add_day(tomorrow, 365);
 	cout << tomorrow << "\n";
 }
+
+catch (exception& e) {
+	cerr << e.what() <<endl;
+	return 1;
+}
+
 int main()
 {
 	f();

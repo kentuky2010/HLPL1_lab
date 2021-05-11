@@ -58,7 +58,7 @@ void f()
 	init_day(today, 1978, 6, 25);
 	cout << today << "\n";
 	Date tomorrow = today;
-	add_day(tomorrow, 365);
+	add_day(tomorrow, 1);
 	cout << tomorrow << "\n";
 }
 int main()

@@ -33,7 +33,7 @@ ostream& operator<<(ostream& os, const Date& d)
 	return os << d.y << "." << d.m << "." << d.d;
 }
 
-int main()
+void f()
 try {
 
 	Date today = { 1978, 6, 25 };
@@ -41,9 +41,13 @@ try {
 	Date tomorrow = today;
 	tomorrow.add_day(1);
 	cout << tomorrow << endl;
-	return 0;
 }
 catch (exception& e) {
 	cerr << e.what() << endl;
-	return 1;
+}
+
+int main()
+{
+	f();
+	return 0;
 }

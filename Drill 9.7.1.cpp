@@ -49,15 +49,12 @@ Date::Date(int yy, Month mm, int dd)
 {
 	int yearMin(1900), yearMax(2200);
 	if (yy > yearMax || yy < yearMin)
-		cout << "Invalid year!";
+		error "Invalid year!";
 	if (int(mm) > 12 || int(mm) < 1)
-		cout << "Invalid month!";
+		error "Invalid month!";
 	if (dd > 31 || dd < 1)
-		cout << "Invalid day!" << endl;
-	else
-	{
-		y = yy; m = mm; d = dd;
-	}
+		error "Invalid day!" << endl;
+	y = yy; m = mm; d = dd;
 }
 ostream& operator<<(ostream& os, Date& d)
 {

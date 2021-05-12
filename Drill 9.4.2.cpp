@@ -38,13 +38,13 @@ void f()
 try {
 
 	Date today = { 1978, 6, 25 };
-	cout << today << endl;
+	cout << today << "\n";
 	Date tomorrow = today;
 	tomorrow.add_day(1);
-	cout << tomorrow << endl;
+	cout << tomorrow << "\n";
 }
 catch (exception& e) {
-	cerr << e.what() << endl;
+	cerr << e.what() << "\n";
 }
 
 int main()

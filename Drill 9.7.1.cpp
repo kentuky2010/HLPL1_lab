@@ -73,7 +73,7 @@ try {
 }
 
 catch (exception& e) {
-	cerr << e.what() << endl;
+	cerr << e.what() << "\n";
 }
 
 int main()
